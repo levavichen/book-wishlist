@@ -1,0 +1,13 @@
+{
+    "listOfBooks": [
+      {
+        "id": "b201",
+        "title": "Eloquent JavaScript",
+        "listPrice": {
+          "amount": 25.0,
+          "currencyCode": "USD"
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,76 @@
+{
+  "listOfBooks": [
+    {
+      "id": "b101",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt & David Thomas",
+      "onWishlist": true,
+      "description": "A classic guide to programming best practices, focusing on pragmatic approaches to writing clean, maintainable, and adaptable code.",
+      "rating": 4,
+      "price": 39.9
+    },
+    {
+      "id": "b102",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "onWishlist": false,
+      "description": "A handbook of agile software craftsmanship that teaches how to write code that is readable, reusable, and efficient.",
+      "rating": 4,
+      "price": 29.9
+    },
+    {
+      "id": "b103",
+      "title": "You Don’t Know JS",
+      "author": "Kyle Simpson",
+      "onWishlist": true,
+      "description": "An in-depth exploration of JavaScript, covering core concepts, scope, closures, and asynchronous patterns for advanced developers.",
+      "rating": 4,
+      "price": 19.9
+    },
+    {
+      "id": "b104",
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "onWishlist": false,
+      "description": "A comprehensive guide to improving the design of existing code, making it easier to understand, maintain, and extend.",
+      "rating": 4,
+      "price": 34.5
+    },
+    {
+      "id": "b105",
+      "title": "Design Patterns",
+      "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "onWishlist": true,
+      "description": "The classic book on object-oriented design patterns that provides reusable solutions to common software engineering problems.",
+      "rating": 4,
+      "price": 42
+    },
+    {
+      "id": "b106",
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "onWishlist": false,
+      "description": "A deep dive into the core features of JavaScript that make it a powerful and elegant language for web development.",
+      "rating": 4,
+      "price": 24
+    },
+    {
+      "id": "b107",
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+      "onWishlist": true,
+      "description": "A comprehensive and authoritative textbook on algorithms, widely used in universities and loved by software engineers worldwide.",
+      "rating": 4,
+      "price": 59.9
+    },
+    {
+      "id": "b108",
+      "title": "Effective Java",
+      "author": "Joshua Bloch",
+      "onWishlist": false,
+      "description": "A guide to best practices in Java programming, offering practical advice to write reliable, maintainable, and efficient code.",
+      "rating": 4,
+      "price": 45
+    }
+  ]
+}
