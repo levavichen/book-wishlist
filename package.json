@@ -12,10 +12,15 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
     "@mui/material": "^7.3.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "sass": "^1.92.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

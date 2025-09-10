@@ -1,0 +1,13 @@
+.book-index {
+    justify-self: center;
+    align-self: center;
+
+    margin-block-start: 2em;
+
+    .main-content {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+}

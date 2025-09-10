@@ -1,0 +1,55 @@
+.book-item {
+    width: 325px;
+    height: 359px;
+    padding: 1.5em;
+    background-color: white;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+        margin-bottom: 18px;
+        border-bottom: 0.1em solid rgb(215, 215, 215);
+
+        h3 {
+            font-size: 1em;
+            font-weight: 200;
+        }
+
+        .css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root {
+            padding: 0;
+        }
+    }
+
+    .book-main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h4 {
+            font-size: 1em;
+            font-weight: 200;
+            color: #A594F9;
+        }
+
+        .book-desc {
+            height: 100px;
+            overflow-y: auto;
+            padding-right: 1em;
+            line-height: 1.4em;
+            scroll-behavior: smooth;
+            scrollbar-color: black;
+        }
+
+        .full.fa-solid {
+            text-shadow: 0 0 1px black;
+            color: yellow;
+        }
+
+        .empty.fa-solid {
+            text-shadow: 0 0 1px black;
+            color: white;
+        }
+    }
+}

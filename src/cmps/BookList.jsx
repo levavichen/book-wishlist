@@ -9,6 +9,7 @@ export function BookList({ books }) {
                 {books.map((book) => (
                     <li key={book.id}>
                         <p>{book.title}</p>
+                        <button>X</button>
                     </li>
                 ))}
             </ul>

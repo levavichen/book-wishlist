@@ -1,9 +1,9 @@
-import { BookItem } from './cmps/BookItem'
-import { BookList } from './cmps/BookList'
-import { bookService } from './services/book.service'
+import { BookItem } from '../cmps/BookItem'
+import { BookList } from '../cmps/BookList'
+import { bookService } from '../services/book.service'
 import { useEffect, useState } from 'react'
 
-export default function App() {
+export function BookIndex() {
   const [books, setBooks] = useState([])
   const [currPage, setcurrPage] = useState('0')
 
@@ -36,16 +36,20 @@ export default function App() {
   }
 
   return (
-    <main>
-      <h1>Book Wishlist</h1>
-      <BookList
-        books={books}
-      />
-      <BookItem
-        books={books}
-        currPage={currPage}
-        onUpdateBook={onUpdateBook}
-      />
+    <main className='book-index'>
+      <header>
+        <h1>Book Wishlist</h1>
+      </header>
+      <section className='main-content'>
+        <BookItem
+          books={books}
+          currPage={currPage}
+          onUpdateBook={onUpdateBook}
+        />
+        <BookList
+          books={books}
+        />
+      </section>
     </main>
   )
 }

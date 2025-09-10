@@ -1,0 +1,43 @@
+.book-list {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    li {
+        display: flex;
+        width: 200px;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        box-shadow: 3px 3px 5px rgb(197, 196, 196);
+        transition: all 0.2s ease-in-out;
+
+
+        p {
+            margin-left: 5px;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(246, 246, 246);
+            box-shadow: 5px 5px 5px rgb(95, 95, 95);
+        }
+
+        button{
+            background-color: #A594F9;
+            font-weight: bold;
+
+            &:hover{
+                background-color: #a594f980
+            }
+        }
+    }
+    
+}
