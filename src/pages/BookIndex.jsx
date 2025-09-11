@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 export function BookIndex() {
   const [books, setBooks] = useState([])
-  const [currPage, setcurrPage] = useState('0')
+  const [currPage, setCurrPage] = useState(0)
 
 
   useEffect(() => {
@@ -35,17 +35,33 @@ export function BookIndex() {
     }
   }
 
+  function onSetPage(diff) {
+    setCurrPage(prevPage => {
+      const nextPage = prevPage + diff
+      return nextPage
+     })
+  }
+
   return (
     <main className='book-index'>
-      <header>
-        <h1>Book Wishlist</h1>
-      </header>
       <section className='main-content'>
+        {currPage>0 &&
+              <i 
+              className="fa-solid fa-chevron-left"
+              onClick={()=>onSetPage(-1)}
+              ></i>
+        }
         <BookItem
           books={books}
           currPage={currPage}
           onUpdateBook={onUpdateBook}
         />
+        {currPage<books.length-1 &&
+                <i 
+                className="fa-solid fa-chevron-right"
+                onClick={()=>onSetPage(1)}
+                />
+        }
         <BookList
           books={books}
         />

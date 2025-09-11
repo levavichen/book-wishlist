@@ -24,7 +24,7 @@
       "author": "Kyle Simpson",
       "onWishlist": true,
       "description": "An in-depth exploration of JavaScript, covering core concepts, scope, closures, and asynchronous patterns for advanced developers.",
-      "rating": 4,
+      "rating": 2,
       "price": 19.9
     },
     {
@@ -33,7 +33,7 @@
       "author": "Martin Fowler",
       "onWishlist": false,
       "description": "A comprehensive guide to improving the design of existing code, making it easier to understand, maintain, and extend.",
-      "rating": 4,
+      "rating": 3,
       "price": 34.5
     },
     {
@@ -51,7 +51,7 @@
       "author": "Douglas Crockford",
       "onWishlist": false,
       "description": "A deep dive into the core features of JavaScript that make it a powerful and elegant language for web development.",
-      "rating": 4,
+      "rating": 5,
       "price": 24
     },
     {
@@ -60,7 +60,7 @@
       "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
       "onWishlist": true,
       "description": "A comprehensive and authoritative textbook on algorithms, widely used in universities and loved by software engineers worldwide.",
-      "rating": 4,
+      "rating": 1,
       "price": 59.9
     },
     {
