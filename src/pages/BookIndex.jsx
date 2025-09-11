@@ -38,6 +38,8 @@ export function BookIndex() {
   function onSetPage(diff) {
     setCurrPage(prevPage => {
       const nextPage = prevPage + diff
+      if(nextPage<=0) return 0
+      if(nextPage>=books.length-1) return books.length-1
       return nextPage
      })
   }
@@ -45,23 +47,19 @@ export function BookIndex() {
   return (
     <main className='book-index'>
       <section className='main-content'>
-        {currPage>0 &&
               <i 
-              className="fa-solid fa-chevron-left"
+              className={`fa-solid fa-chevron-left ${currPage<=0 ? 'hidden': ''}`}
               onClick={()=>onSetPage(-1)}
               ></i>
-        }
         <BookItem
           books={books}
           currPage={currPage}
           onUpdateBook={onUpdateBook}
         />
-        {currPage<books.length-1 &&
                 <i 
-                className="fa-solid fa-chevron-right"
+                className={`fa-solid fa-chevron-right ${currPage>=books.length-1 ? 'hidden': ''}`}
                 onClick={()=>onSetPage(1)}
                 />
-        }
         <BookList
           books={books}
         />

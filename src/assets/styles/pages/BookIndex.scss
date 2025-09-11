@@ -8,4 +8,18 @@
         gap: 1em;
     }
 
+    i{
+        cursor: pointer;
+        font-size: 2em;
+        color: rgb(215, 215, 215);
+
+        &:hover{
+            color: rgba(0, 0, 0, 0.514);
+        }
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
 }
