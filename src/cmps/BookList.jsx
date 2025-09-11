@@ -6,8 +6,10 @@ export function BookList({ books }) {
     return (
         <div className="book-list">
             <ul>
-                {books.map((book) => (
-                    <li key={book.id}>
+                {books
+                .filter(book=> book.onWishlist)
+                .map((book) => (
+                    <li key={book._id}>
                         <p>{book.title}</p>
                         <button>X</button>
                     </li>

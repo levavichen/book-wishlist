@@ -1,7 +1,7 @@
 {
   "listOfBooks": [
     {
-      "id": "b101",
+      "_id": "b101",
       "title": "The Pragmatic Programmer",
       "author": "Andrew Hunt & David Thomas",
       "onWishlist": true,
@@ -10,7 +10,7 @@
       "price": 39.9
     },
     {
-      "id": "b102",
+      "_id": "b102",
       "title": "Clean Code",
       "author": "Robert C. Martin",
       "onWishlist": false,
@@ -19,7 +19,7 @@
       "price": 29.9
     },
     {
-      "id": "b103",
+      "_id": "b103",
       "title": "You Don’t Know JS",
       "author": "Kyle Simpson",
       "onWishlist": true,
@@ -28,7 +28,7 @@
       "price": 19.9
     },
     {
-      "id": "b104",
+      "_id": "b104",
       "title": "Refactoring",
       "author": "Martin Fowler",
       "onWishlist": false,
@@ -37,7 +37,7 @@
       "price": 34.5
     },
     {
-      "id": "b105",
+      "_id": "b105",
       "title": "Design Patterns",
       "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
       "onWishlist": true,
@@ -46,7 +46,7 @@
       "price": 42
     },
     {
-      "id": "b106",
+      "_id": "b106",
       "title": "JavaScript: The Good Parts",
       "author": "Douglas Crockford",
       "onWishlist": false,
@@ -55,7 +55,7 @@
       "price": 24
     },
     {
-      "id": "b107",
+      "_id": "b107",
       "title": "Introduction to Algorithms",
       "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
       "onWishlist": true,
@@ -64,7 +64,7 @@
       "price": 59.9
     },
     {
-      "id": "b108",
+      "_id": "b108",
       "title": "Effective Java",
       "author": "Joshua Bloch",
       "onWishlist": false,

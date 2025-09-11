@@ -17,7 +17,7 @@ export function BookItem({ books, currPage, onUpdateBook }) {
             <section className='header'>
                 <h3>{currBook.title}</h3>
                 <Checkbox
-                    checked={currBook.onWishList}
+                    checked={currBook.onWishlist}
                     onChange={handleWishlist}
                 />
             </section>

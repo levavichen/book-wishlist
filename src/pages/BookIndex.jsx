@@ -2,6 +2,7 @@ import { BookItem } from '../cmps/BookItem'
 import { BookList } from '../cmps/BookList'
 import { bookService } from '../services/book.service'
 import { useEffect, useState } from 'react'
+import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 
 export function BookIndex() {
   const [books, setBooks] = useState([])
@@ -13,9 +14,8 @@ export function BookIndex() {
   }, [])
 
   async function loadBooks() {
-    const url = '/data/listOfBooks.json'
     try {
-      const books = await bookService.loadBooks(url)
+      const books = await bookService.query()
       setBooks(books)
     } catch (error) {
       console.error('Error loading books', error)
@@ -27,7 +27,7 @@ export function BookIndex() {
     try {
       const savedBook = await bookService.saveBook(bookToSave)
       setBooks(prevBooks =>
-        prevBooks.map(book => (book.id === savedBook.id ? savedBook : book))
+        prevBooks.map(book => (book._id === savedBook._id ? savedBook : book))
       )
       showSuccessMsg(`Book updated`)
     } catch (err) {
@@ -38,28 +38,28 @@ export function BookIndex() {
   function onSetPage(diff) {
     setCurrPage(prevPage => {
       const nextPage = prevPage + diff
-      if(nextPage<=0) return 0
-      if(nextPage>=books.length-1) return books.length-1
+      if (nextPage <= 0) return 0
+      if (nextPage >= books.length - 1) return books.length - 1
       return nextPage
-     })
+    })
   }
 
   return (
     <main className='book-index'>
       <section className='main-content'>
-              <i 
-              className={`fa-solid fa-chevron-left ${currPage<=0 ? 'hidden': ''}`}
-              onClick={()=>onSetPage(-1)}
-              ></i>
+        <i
+          className={`fa-solid fa-chevron-left ${currPage <= 0 ? 'hidden' : ''}`}
+          onClick={() => onSetPage(-1)}
+        ></i>
         <BookItem
           books={books}
           currPage={currPage}
           onUpdateBook={onUpdateBook}
         />
-                <i 
-                className={`fa-solid fa-chevron-right ${currPage>=books.length-1 ? 'hidden': ''}`}
-                onClick={()=>onSetPage(1)}
-                />
+        <i
+          className={`fa-solid fa-chevron-right ${currPage >= books.length - 1 ? 'hidden' : ''}`}
+          onClick={() => onSetPage(1)}
+        />
         <BookList
           books={books}
         />
