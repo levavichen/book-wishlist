@@ -62,6 +62,7 @@ export function BookIndex() {
         />
         <BookList
           books={books}
+          onUpdateBook={onUpdateBook}
         />
       </section>
     </main>
