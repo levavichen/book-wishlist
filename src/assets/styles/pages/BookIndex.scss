@@ -1,25 +1,37 @@
 .book-index {
+    display: flex;
     justify-self: center;
-    align-self: center;
+    // align-self: center;
+    align-items: center;
+    gap: 1em;
 
     .main-content {
         display: flex;
-        align-items: center;
-        gap: 1em;
+
     }
 
-    i{
-        cursor: pointer;
-        font-size: 2em;
-        color: rgb(215, 215, 215);
+    .left-side {
+        display: flex;
 
-        &:hover{
-            color: rgba(0, 0, 0, 0.514);
+        i {
+            cursor: pointer;
+            font-size: 2em;
+            color: rgb(215, 215, 215);
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.514);
+            }
+        }
+
+        .hidden {
+            visibility: hidden;
         }
     }
 
-    .hidden{
-        visibility: hidden;
+    .right-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 }

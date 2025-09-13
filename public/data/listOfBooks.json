@@ -6,7 +6,7 @@
       "author": "Andrew Hunt & David Thomas",
       "onWishlist": true,
       "description": "A classic guide to programming best practices, focusing on pragmatic approaches to writing clean, maintainable, and adaptable code.",
-      "rating": 4,
+      "rating": 4.2,
       "price": 39.9
     },
     {
@@ -15,7 +15,7 @@
       "author": "Robert C. Martin",
       "onWishlist": false,
       "description": "A handbook of agile software craftsmanship that teaches how to write code that is readable, reusable, and efficient.",
-      "rating": 4,
+      "rating": 4.9,
       "price": 29.9
     },
     {

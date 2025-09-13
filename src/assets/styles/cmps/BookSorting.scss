@@ -1,0 +1,33 @@
+.book-sorting {
+    display: flex;
+    justify-content: space-between;
+    // min-width: 216px;
+    height: 50px;
+    background-color: white;
+
+    .sort-row {
+        display: flex;
+        text-align: center;
+        flex: 1;
+        border-top: 1px solid #d7d7d7;
+        border-bottom: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+
+        &:first-child {
+            border-left: 1px solid #d7d7d7;
+        }
+
+        &:last-child {
+            border-right: 1px solid #d7d7d7;
+        }
+
+        .btn-sort{
+            padding: 0;
+            margin: 0;
+
+            &.active{
+                color: #A594F9;
+            }
+        }
+    }
+}

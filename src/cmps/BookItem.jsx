@@ -26,7 +26,8 @@ export function BookItem({ books, currPage, onUpdateBook }) {
                 <p className='book-desc'>{currBook.description}</p>
                 <div className='star-rating'>Rating:
                     {[...Array(totalStars)].map((_, idx) => {
-                        const starClass = idx < Math.floor(currBook.rating) ? 'full fa-solid fa-star' : 'empty fa-solid fa-star'
+                        const roundedRating = Math.round(currBook.rating)
+                        const starClass = idx < Math.floor(roundedRating) ? 'full fa-solid fa-star' : 'empty fa-solid fa-star'
                         return (
                             <span key={idx} className={starClass}></span>
                         )

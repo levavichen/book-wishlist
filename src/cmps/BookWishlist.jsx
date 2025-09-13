@@ -1,18 +1,17 @@
-import { onUpdated } from "vue"
 
+export function BookWishlist({ wishlistBooks, onUpdateBook }) {
 
-export function BookList({ books, onUpdateBook }) {
-    if (!books || books.length === 0) return <p>No books to show</p>
+    if (!wishlistBooks || wishlistBooks.length === 0) return <p>No books to show</p>
+
 
     return (
-        <div className="book-list">
-            <ul>
-                {books
-                    .filter(book => book.onWishlist)
+        <div className="book-wishlist">
+            <ul className="list">
+                {wishlistBooks
                     .map((book) => (
                         <li key={book._id}>
                             <p>{book.title}</p>
-                            <button
+                            <button className="remove-btn"
                                 onClick={() => onUpdateBook(book, !book.onWishlist)}
                             >X</button>
                         </li>

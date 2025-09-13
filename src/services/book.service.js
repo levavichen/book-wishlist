@@ -13,45 +13,25 @@ export const bookService = {
     remove,
 }
 
-async function query() {
-    const books = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
+async function query(sortBy = { sortField: '', sortDir: 1 }) {
+    var books = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
+    const {sortField, sortDir } = sortBy
+    if (sortField === 'title') {
+        books.sort((book1, book2) =>
+            book1[sortField].localeCompare(book2[sortField]) * +sortDir)
+    }
+    if (sortField === 'price' || sortField === 'rating') {
+        books.sort((book1, book2) =>
+            (book1[sortField] - book2[sortField]) * +sortDir)
+    }
     return books
-  }
-
-// async function query(filterBy = { txt: '', price: 0 }) {
-//     var books = await storageService.query(STORAGE_KEY)
-//     console.log('books:', books)
-//     const { txt, minSpeed, maxPrice, sortField, sortDir } = filterBy
-
-//     if (txt) {
-//         const regex = new RegExp(filterBy.txt, 'i')
-//         books = books.filter(book => regex.test(book.vendor) || regex.test(book.description))
-//     }
-//     if (minSpeed) {
-//         books = books.filter(book => book.speed <= minSpeed)
-//     }
-//     if (maxPrice) {
-//         books = books.filter(book => book.price <= maxPrice)
-//     }
-//     if (sortField === 'vendor' || sortField === 'owner') {
-//         books.sort((book1, book2) =>
-//             book1[sortField].localeCompare(book2[sortField]) * +sortDir)
-//     }
-//     if (sortField === 'price' || sortField === 'speed') {
-//         books.sort((book1, book2) =>
-//             (book1[sortField] - book2[sortField]) * +sortDir)
-//     }
-
-//     books = books.map(({ _id, vendor, price, speed, owner }) => ({ _id, vendor, price, speed, owner }))
-//     return books
-// }
+}
 
 function getById(bookId) {
     return storageService.get(STORAGE_KEY, bookId)
 }
 
 async function remove(bookId) {
-    // throw new Error('Nope')
     await storageService.remove(STORAGE_KEY, bookId)
 }
 
@@ -83,12 +63,12 @@ async function saveBook(book) {
 
 async function _createBooks() {
     let books = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
-  
+
     if (!books.length) {
-      const res = await fetch('/data/listOfBooks.json')
-      const data = await res.json()
-      books = data.listOfBooks || []
-  
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(books))
+        const res = await fetch('/data/listOfBooks.json')
+        const data = await res.json()
+        books = data.listOfBooks || []
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(books))
     }
-  }
+}
